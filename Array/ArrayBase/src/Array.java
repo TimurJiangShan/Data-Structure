@@ -76,6 +76,26 @@ public class Array {
 
     }
 
+    /**
+     * Get position of index element
+     * */
+
+    public int get(int index){
+        if (index < 0 || index > size - 1) {
+            throw new IllegalArgumentException("Illegal index");
+        }
+
+        return data[index];
+    }
+
+    public void set(int index, int e) {
+        if (index < 0 || index > size - 1) {
+            throw new IllegalArgumentException("Illegal index");
+        }
+
+        data[index] = e;
+    }
+
     @Override
     public String toString() {
 
