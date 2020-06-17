@@ -41,10 +41,38 @@ public class Array {
      * */
     public void addList(int e) {
 
-        if(size == data.length) {
-            throw new IllegalArgumentException("AddLast failed");
+        add(size, e);
+    }
+
+    /**
+     * Add new element in the first position
+     * */
+
+    public void addFirst(int e) {
+        add(0, e);
+    }
+
+    /**
+     * Add new element in a specific position
+     * */
+
+    public void add(int index, int e) {
+
+        if(index == data.length) {
+            throw new IllegalArgumentException("Add failed, array is full");
         }
-        data[size] = e;
+
+        if(index < 0 || index > size){
+            throw new IllegalArgumentException("Add failed, index should > 0 and < size");
+        }
+
+        for (int i = size; i > index; i--){
+            data[i] = data[i-1];
+        }
+        data[index] = e;
         size++;
+
+
+
     }
 }
