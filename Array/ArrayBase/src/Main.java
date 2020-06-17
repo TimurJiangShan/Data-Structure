@@ -1,16 +1,15 @@
 public class Main {
     public static void main(String[] args){
 
-        int[] arr = new int[10];
-        for (int i = 0; i < arr.length; i++){
-            arr[i] = i;
+        Array arr = new Array(20);
+        for (int i = 0; i < 10; i ++) {
+            arr.addList(i);
         }
+        // println(arr) 就会调用自己写的那个toString() 方法
+        System.out.println(arr);
 
-        int[] scores = new int[]{ 100, 99, 66};
-        for (int i = 0; i < scores.length; i++)
-            System.out.println(scores[i]);
-
-        for(int score: scores)
-            System.out.println(score);
+        arr.add(3, 66);
+        System.out.println(arr);
+        arr.add(333, 66);
     }
 }

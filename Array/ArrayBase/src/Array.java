@@ -8,6 +8,7 @@ public class Array {
      * */
     public Array(int capacity) {
         data = new int[capacity];
+        size = 0;
     }
 
     // No para
@@ -66,13 +67,29 @@ public class Array {
             throw new IllegalArgumentException("Add failed, index should > 0 and < size");
         }
 
+        // 从后往前添加元素，
         for (int i = size; i > index; i--){
             data[i] = data[i-1];
         }
         data[index] = e;
         size++;
 
+    }
 
+    @Override
+    public String toString() {
 
+        StringBuilder res = new StringBuilder();
+        res.append(String.format("Array: size = %d, capacity = %d\n", size, data.length));
+        res.append("[");
+        for (int i = 0; i < size; i++) {
+            res.append(data[i]);
+            if(i != size - 1) {
+                res.append(", ");
+            } else {
+                res.append("]");
+            }
+        }
+        return res.toString();
     }
 }
