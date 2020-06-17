@@ -35,4 +35,16 @@ public class Array {
     public boolean isEmpty(){
         return size == 0;
     }
+
+    /**
+     * Add new element in the last position
+     * */
+    public void addList(int e) {
+
+        if(size == data.length) {
+            throw new IllegalArgumentException("AddLast failed");
+        }
+        data[size] = e;
+        size++;
+    }
 }
