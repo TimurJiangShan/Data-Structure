@@ -38,6 +38,32 @@ public class Array {
     }
 
     /**
+     * Check whether the element e is in the data
+     * */
+
+    public boolean contains(int e){
+        for (int i = 0; i < size; i++){
+            if (data[i] == e) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Find the index of a specific element
+     * */
+
+    public int find(int e) {
+        for(int i = 0; i < size; i++){
+            if (data[i] == e) {
+                return i;
+            }
+        }
+        throw new IllegalArgumentException("No element found");
+    }
+
+    /**
      * Add new element in the last position
      * */
     public void addList(int e) {
