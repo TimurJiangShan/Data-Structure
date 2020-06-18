@@ -10,6 +10,10 @@ public class Main {
 
         arr.add(3, 66);
         System.out.println(arr);
-        arr.add(333, 66);
+//        arr.add(333, 66);
+
+
+        arr.remove(2);
+        System.out.println(arr);
     }
 }

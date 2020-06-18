@@ -60,7 +60,7 @@ public class Array {
                 return i;
             }
         }
-        throw new IllegalArgumentException("No element found");
+        return -1;
     }
 
     /**
@@ -79,6 +79,35 @@ public class Array {
         add(0, e);
     }
 
+    /**
+     * Remove a specific element and return it.
+     * */
+
+    public int remove(int index){
+        if(index < 0 || index > size - 1) {
+            throw new IllegalArgumentException("Index should be valid");
+        }
+
+        int res = data[index];
+        for (int i = index; i < size - 1; i++){
+            data[i] = data[i+1];
+        }
+        size--;
+        return res;
+
+    }
+
+    public int removeFirst(){
+        return remove(0);
+    }
+
+    public int removeLast(){
+        return remove(size - 1);
+    }
+
+    public void removeElement(int e){
+        remove(find(e));
+    }
     /**
      * Add new element in a specific position
      * */
