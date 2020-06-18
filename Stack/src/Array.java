@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 public class Array<E> {
 
     private E[] data;
@@ -69,7 +67,7 @@ public class Array<E> {
     /**
      * Add new element in the last position
      * */
-    public void addList(E e) {
+    public void addLast(E e) {
 
         add(size, e);
     }

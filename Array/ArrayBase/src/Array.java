@@ -98,7 +98,8 @@ public class Array<E> {
         size--;
         data[size] = null; // loitering objects != memory leak
 
-        if (size <= data.length /2){
+        // 这里有均摊复杂度的考量
+        if (size <= data.length / 4 && data.length / 2 != 0){
             resize(data.length / 2);
         }
 
