@@ -1,13 +1,16 @@
-public class Array {
+import java.util.Objects;
 
-    private int[] data;
+public class Array<E> {
+
+    private E[] data;
     private int size;
 
     /**
      * @param capacity
      * */
     public Array(int capacity) {
-        data = new int[capacity];
+        // 这里需要强制类型转换一下
+        data = (E[])new Object[capacity];
         size = 0;
     }
 
@@ -41,7 +44,7 @@ public class Array {
      * Check whether the element e is in the data
      * */
 
-    public boolean contains(int e){
+    public boolean contains(E e){
         for (int i = 0; i < size; i++){
             if (data[i] == e) {
                 return true;
@@ -54,7 +57,7 @@ public class Array {
      * Find the index of a specific element
      * */
 
-    public int find(int e) {
+    public int find(E e) {
         for(int i = 0; i < size; i++){
             if (data[i] == e) {
                 return i;
@@ -66,7 +69,7 @@ public class Array {
     /**
      * Add new element in the last position
      * */
-    public void addList(int e) {
+    public void addList(E e) {
 
         add(size, e);
     }
@@ -75,7 +78,7 @@ public class Array {
      * Add new element in the first position
      * */
 
-    public void addFirst(int e) {
+    public void addFirst(E e) {
         add(0, e);
     }
 
@@ -83,12 +86,12 @@ public class Array {
      * Remove a specific element and return it.
      * */
 
-    public int remove(int index){
+    public E remove(int index){
         if(index < 0 || index > size - 1) {
             throw new IllegalArgumentException("Index should be valid");
         }
 
-        int res = data[index];
+        E res = data[index];
         for (int i = index; i < size - 1; i++){
             data[i] = data[i+1];
         }
@@ -97,22 +100,22 @@ public class Array {
 
     }
 
-    public int removeFirst(){
+    public E removeFirst(){
         return remove(0);
     }
 
-    public int removeLast(){
+    public E removeLast(){
         return remove(size - 1);
     }
 
-    public void removeElement(int e){
+    public void removeElement(E e){
         remove(find(e));
     }
     /**
      * Add new element in a specific position
      * */
 
-    public void add(int index, int e) {
+    public void add(int index, E e) {
 
         if(index == data.length) {
             throw new IllegalArgumentException("Add failed, array is full");
@@ -135,7 +138,7 @@ public class Array {
      * Get position of index element
      * */
 
-    public int get(int index){
+    public E get(int index){
         if (index < 0 || index > size - 1) {
             throw new IllegalArgumentException("Illegal index");
         }
@@ -143,7 +146,7 @@ public class Array {
         return data[index];
     }
 
-    public void set(int index, int e) {
+    public void set(int index, E e) {
         if (index < 0 || index > size - 1) {
             throw new IllegalArgumentException("Illegal index");
         }
