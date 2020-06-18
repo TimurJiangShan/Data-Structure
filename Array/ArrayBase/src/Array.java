@@ -97,6 +97,11 @@ public class Array<E> {
         }
         size--;
         data[size] = null; // loitering objects != memory leak
+
+        if (size <= data.length /2){
+            resize(data.length / 2);
+        }
+
         return res;
 
     }
@@ -118,12 +123,14 @@ public class Array<E> {
 
     public void add(int index, E e) {
 
-        if(index == data.length) {
-            throw new IllegalArgumentException("Add failed, array is full");
-        }
+
 
         if(index < 0 || index > size){
             throw new IllegalArgumentException("Add failed, index should > 0 and < size");
+        }
+
+        if(size == data.length) {
+            resize(2 * data.length);
         }
 
         // 从后往前添加元素，
@@ -170,5 +177,13 @@ public class Array<E> {
             }
         }
         return res.toString();
+    }
+
+    private void resize(int newCapacity){
+        E[] newData  = (E[])new Object[newCapacity];
+        for (int i = 0; i < size; i++){
+            newData[i] = data[i];
+        }
+        data = newData;
     }
 }

@@ -8,11 +8,6 @@ public class Main {
         // println(arr) 就会调用自己写的那个toString() 方法
         System.out.println(arr);
 
-        arr.add(3, 66);
-        System.out.println(arr);
-//        arr.add(333, 66);
-
-
         arr.remove(2);
         System.out.println(arr);
     }
