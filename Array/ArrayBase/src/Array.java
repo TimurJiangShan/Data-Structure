@@ -46,7 +46,7 @@ public class Array<E> {
 
     public boolean contains(E e){
         for (int i = 0; i < size; i++){
-            if (data[i] == e) {
+            if (data[i].equals(e)) {
                 return true;
             }
         }
@@ -59,7 +59,7 @@ public class Array<E> {
 
     public int find(E e) {
         for(int i = 0; i < size; i++){
-            if (data[i] == e) {
+            if (data[i].equals(e)) {
                 return i;
             }
         }
@@ -96,6 +96,7 @@ public class Array<E> {
             data[i] = data[i+1];
         }
         size--;
+        data[size] = null; // loitering objects != memory leak
         return res;
 
     }
