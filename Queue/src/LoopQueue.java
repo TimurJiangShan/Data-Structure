@@ -19,13 +19,13 @@ public class LoopQueue<E> implements Queue<E> {
         this(10);
     }
 
-    public int getCapacity(){
-        return data.length - 1;
-    }
+        public int getCapacity(){
+            return data.length - 1;
+        }
 
-    @Override
-    public boolean isEmpty(){
-        return front == tail;
+        @Override
+        public boolean isEmpty(){
+            return front == tail;
     }
 
     @Override
