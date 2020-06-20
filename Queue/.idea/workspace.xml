@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5da45df4-b1da-4c83-a6dd-d1d5a4419648" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Queue/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Queue/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedList/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedList/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedList/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedList/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedList/LinkedList.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedList/src/com/company/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedList/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +33,9 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1dWhsQ6KxyqwPm8NBpQS4fSHOCw" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -37,6 +43,7 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -114,34 +121,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592546962321</updated>
-      <workItem from="1592546969350" duration="14468000" />
+      <workItem from="1592546969350" duration="15211000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1740" height="289" key="GridCell.Tab.0.bottom" timestamp="1592639835081">
+    <state width="1740" height="289" key="GridCell.Tab.0.bottom" timestamp="1592639993617">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state width="1740" height="304" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1592635471849" />
-    <state width="1740" height="289" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1592639835081" />
-    <state width="1740" height="289" key="GridCell.Tab.0.center" timestamp="1592639835080">
+    <state width="1740" height="289" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1592639993617" />
+    <state width="1740" height="289" key="GridCell.Tab.0.center" timestamp="1592639993616">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state width="1740" height="304" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1592635471848" />
-    <state width="1740" height="289" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1592639835080" />
-    <state width="1740" height="289" key="GridCell.Tab.0.left" timestamp="1592639835080">
+    <state width="1740" height="289" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1592639993616" />
+    <state width="1740" height="289" key="GridCell.Tab.0.left" timestamp="1592639993616">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state width="1740" height="304" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1592635471847" />
-    <state width="1740" height="289" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1592639835080" />
-    <state width="1740" height="289" key="GridCell.Tab.0.right" timestamp="1592639835081">
+    <state width="1740" height="289" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1592639993616" />
+    <state width="1740" height="289" key="GridCell.Tab.0.right" timestamp="1592639993617">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state width="1740" height="304" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1592635471849" />
-    <state width="1740" height="289" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1592639835081" />
+    <state width="1740" height="289" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1592639993617" />
     <state width="1740" height="377" key="GridCell.Tab.1.bottom" timestamp="1592634324744">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -158,5 +168,9 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1740" height="377" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1592634324743" />
+    <state x="95" y="76" key="new project wizard" timestamp="1592640277586">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="95" y="76" key="new project wizard/0.23.1792.1097@0.23.1792.1097" timestamp="1592640277586" />
   </component>
 </project>
