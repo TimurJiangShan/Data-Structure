@@ -1,5 +1,3 @@
-import org.omg.CORBA.Object;
-
 import java.util.Objects;
 
 // 对于循环队列 front == tail 队列为空， （tail + 1）% c == front 队列满
@@ -11,7 +9,7 @@ public class LoopQueue<E> implements Queue<E> {
     private int size;
 
     public LoopQueue(int capacity){
-        data = (E[])new Objects[capacity + 1];
+        data = (E[])new Object[capacity + 1];
         front = 0;
         tail = 0;
         size = 0;
@@ -85,6 +83,35 @@ public class LoopQueue<E> implements Queue<E> {
         if (size == getCapacity() / 4 && getCapacity() / 2 != 0)
             resize(getCapacity() / 2);
         return ret;
+    }
+
+    @Override
+    public String toString(){
+
+        StringBuilder res = new StringBuilder();
+        res.append(String.format("Queue: size = %d , capacity = %d\n", size, getCapacity()));
+        res.append("front [");
+        for(int i = front ; i != tail ; i = (i + 1) % data.length){
+            res.append(data[i]);
+            if((i + 1) % data.length != tail)
+                res.append(", ");
+        }
+        res.append("] tail");
+        return res.toString();
+    }
+
+    public static void main(String[] args){
+
+        LoopQueue<Integer> queue = new LoopQueue<>();
+        for(int i = 0 ; i < 10 ; i ++){
+            queue.enqueue(i);
+            System.out.println(queue);
+
+            if(i % 3 == 2){
+                queue.dequeue();
+                System.out.println(queue);
+            }
+        }
     }
 
 
