@@ -54,7 +54,7 @@ public class LoopQueue<E> implements Queue<E> {
 
         // 有front个偏移
         for (int i = 0; i < size; i++){
-            newData[i] = data[(i+front) % data.length];
+            newData[i] = data[(front + i) % data.length];
         }
 
         data = newData;
