@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5da45df4-b1da-4c83-a6dd-d1d5a4419648" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../LinkedList/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LinkedList/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LinkedList/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LinkedList/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LinkedList/LinkedList.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LinkedList/src/com/company/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LinkedList/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LinkedList/src/com/company/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LinkedList/src/com/company/LinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +115,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592546962321</updated>
-      <workItem from="1592546969350" duration="15211000" />
+      <workItem from="1592546969350" duration="15763000" />
     </task>
     <servers />
   </component>

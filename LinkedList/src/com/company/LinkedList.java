@@ -19,5 +19,40 @@ public class LinkedList<E> {
         public Node(){
             this(null, null);
         }
+
+        @Override
+        public String toString(){
+            return e.toString();
+        }
     }
+
+    private Node head;
+    private int size;
+
+    public LinkedList(){
+        head = null;
+        size = 0;
+    }
+
+
+    // Get the number of the linkedlist
+    public int getSize(){
+        return size;
+    }
+
+    public boolean isEmpty(){
+        return size == 0;
+    }
+
+    // Add new element at the head
+    public void addFirst(E e){
+        Node node = new Node(e);
+        node.next = head;
+        head = node;
+
+        // head = new Node(e, head);
+        size++;
+    }
+
+
 }
