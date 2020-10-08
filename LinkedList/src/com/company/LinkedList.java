@@ -59,6 +59,8 @@ public class LinkedList<E> {
     // 在链表的index位置添加新节点
 
     public void add(int index, E e){
+
+        // 可以取到size，就是在末尾添加元素
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("Add failed. Illegal index");
         }
