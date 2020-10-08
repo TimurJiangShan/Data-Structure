@@ -15,7 +15,7 @@ public class Main {
         linkedList.add(2,888);
         linkedList.add(2,888);
         System.out.println(linkedList);
-        linkedList.removeElement(888);
+        linkedList.removeAllSelectedElement(888);
         System.out.println(linkedList);
 
     }

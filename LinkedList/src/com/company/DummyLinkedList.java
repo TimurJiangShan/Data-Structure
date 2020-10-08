@@ -71,7 +71,7 @@ public class DummyLinkedList<E> {
         return delNode.e;
     }
 
-    public void removeElement(E e){
+    public void removeAllSelectedElement(E e){
         Node prev = dummyHead;
 
         while (prev.next != null){
