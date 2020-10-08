@@ -63,4 +63,69 @@ public class DummyLinkedList<E> {
     }
 
 
+    public E get(int index){
+        if (index < 0 || index > size) {
+            throw new IllegalArgumentException("Get failed. Illegal index.");
+        }
+        Node current = dummyHead.next;
+
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+
+        return current.e;
+    }
+
+    public E getFirst(){
+        return get(0);
+    }
+
+    public E getLast(){
+        return get(size - 1);
+    }
+
+    public void set(int index, E e){
+        if (index < 0 || index > size) {
+            throw new IllegalArgumentException("Set failed. Illegal index");
+        }
+
+        Node current = dummyHead.next;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+        current.e = e;
+    }
+
+    public boolean contains(E e){
+
+        // while和for循环两种方式
+        Node current = dummyHead.next;
+        while (current != null){
+            if (current.e.equals(e))
+                return true;
+            else
+                current = current.next;
+        }
+//        for (int i = 0; i < size; i++) {
+//            if (current.e.equals(e)) {
+//                return true;
+//            } else {
+//                current = current.next;
+//            }
+//        }
+//        return false;
+        return false;
+    }
+
+    @Override
+    public String toString(){
+        StringBuilder res = new StringBuilder();
+        Node current = dummyHead.next;
+        while (current != null) {
+            res.append(current + "->");
+            current = current.next;
+        }
+        res.append("NULL");
+        return res.toString();
+    }
 }
