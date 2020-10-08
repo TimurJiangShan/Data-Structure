@@ -1,6 +1,6 @@
 package com.company;
 
-
+// 从尾巴入队，从头节点出队。
 public class LinkedListQueue<E> implements Queue<E> {
 
     private class Node{
@@ -63,10 +63,10 @@ public class LinkedListQueue<E> implements Queue<E> {
         Node retNode = head;
         head = retNode.next;
         retNode.next = null;
-        if (head == tail) {
+        if (head == null){
             tail = null;
         }
-        size--;
+        size --;
         return retNode.e;
     }
 
