@@ -54,6 +54,26 @@ public class DummyLinkedList<E> {
         prev.next = new Node(e, prev.next);
         size++;
     }
+
+    public E remove(int index){
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("Remove failed. Illegal index");
+        }
+
+        Node prev = dummyHead;
+        for (int i = 0; i < index; i++) {
+            prev = prev.next;
+        }
+        Node delNode = prev.next;
+        prev.next = delNode.next;
+        delNode.next = null;
+        size--;
+        return delNode.e;
+    }
+
+    public E removeFirst(){
+        return remove(0);
+    }
     public void addFirst(E e){
         add(0, e);
     }
