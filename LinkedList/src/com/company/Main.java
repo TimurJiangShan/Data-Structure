@@ -11,8 +11,12 @@ public class Main {
         }
 
         linkedList.add(2,888);
+        linkedList.add(2,888);
+        linkedList.add(2,888);
+        linkedList.add(2,888);
         System.out.println(linkedList);
-        linkedList.remove(6);
+        linkedList.removeElement(888);
         System.out.println(linkedList);
+
     }
 }
