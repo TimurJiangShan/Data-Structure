@@ -30,21 +30,23 @@ public class LinkedList<E> {
     private int size;
 
     public LinkedList(){
+        // 初始的时候一个节点也没有
         head = null;
         size = 0;
     }
 
 
-    // Get the number of the linkedlist
+    // 获取链表中元素的个数
     public int getSize(){
         return size;
     }
 
+    // 返回链表是否为空
     public boolean isEmpty(){
         return size == 0;
     }
 
-    // Add new element at the head
+    // 在链表头添加新的元素e
     public void addFirst(E e){
         Node node = new Node(e);
         node.next = head;
