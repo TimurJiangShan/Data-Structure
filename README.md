@@ -1,4 +1,2 @@
 # Data-Structure
-** Array
-** Stack
-** Queue
+**LeetCode Practices**
