@@ -95,6 +95,8 @@ public class Array<E> {
         for (int i = index; i < size - 1; i++){
             data[i] = data[i+1];
         }
+
+        // 缩容之后，1. size减一； 2. 之前的最后一个元素设为 null
         size--;
         data[size] = null; // loitering objects != memory leak
 
@@ -124,23 +126,21 @@ public class Array<E> {
 
     public void add(int index, E e) {
 
-
-
-        if(index < 0 || index > size){
-            throw new IllegalArgumentException("Add failed, index should > 0 and < size");
+        // 索引最大可以是size - 1
+        if(index < 0 || index > size) {
+            throw new IllegalArgumentException("Add failed, index should > 0 and <= size");
         }
 
         if(size == data.length) {
-            resize(2 * data.length);
+            resize(size * 2);
         }
 
-        // 从后往前添加元素，
-        for (int i = size; i > index; i--){
+        for (int i = size; i > index; i--) {
             data[i] = data[i-1];
         }
+
         data[index] = e;
         size++;
-
     }
 
     /**
@@ -180,9 +180,10 @@ public class Array<E> {
         return res.toString();
     }
 
+    // 对数组进行扩容和缩容
     private void resize(int newCapacity){
-        E[] newData  = (E[])new Object[newCapacity];
-        for (int i = 0; i < size; i++){
+        E[] newData = (E[])new Object[newCapacity];
+        for (int i = 0; i < size; i++) {
             newData[i] = data[i];
         }
         data = newData;

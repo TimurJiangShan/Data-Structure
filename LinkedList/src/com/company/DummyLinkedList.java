@@ -71,19 +71,22 @@ public class DummyLinkedList<E> {
         return delNode.e;
     }
 
-    public void removeAllSelectedElement(E e){
-        Node prev = dummyHead;
-
-        while (prev.next != null){
-            if (prev.next.e.equals(e)) {
-                Node delNode = prev.next;
-                prev.next = delNode.next;
-                delNode.next = null;
-                size--;
-            } else {
-                prev = prev.next;
-            }
+    public E removeElementAtIndex(int index) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("Index should >= 0 && index <= size - 1");
         }
+
+        Node prev = dummyHead;
+        for (int i = 0; i < index; i++) {
+            prev = prev.next;
+        }
+
+        Node deleteNode = prev.next;
+        E result = deleteNode.e;
+        prev.next = deleteNode.next;
+        deleteNode.next = null;
+        size--;
+        return result;
     }
 
     public E removeFirst(){
