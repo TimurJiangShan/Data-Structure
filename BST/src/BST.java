@@ -80,6 +80,31 @@ public class BST<E extends Comparable<E>> {
         preOrder(root);
     }
 
+
+    private void inOrder(Node node){
+        if (node == null)
+            return;
+
+        inOrder(node.left);
+        System.out.println();
+        inOrder(node.right);
+    }
+
+    public void inOrder(){
+        inOrder(root);
+    }
+
+    private void postOrder(Node node){
+        if (node == null)
+            return;
+
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.println(node.e);
+    }
+
+
+
     @Override
     public String toString(){
         StringBuilder res = new StringBuilder();
