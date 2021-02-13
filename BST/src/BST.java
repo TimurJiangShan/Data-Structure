@@ -65,4 +65,48 @@ public class BST<E extends Comparable<E>> {
         else
             return contains(node.left, e);
     }
+
+    private void preOrder(Node node){
+        if (node == null)
+            return;
+
+        System.out.println(node.e);
+
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+
+    public void preOrder(){
+        preOrder(root);
+    }
+
+    @Override
+    public String toString(){
+        StringBuilder res = new StringBuilder();
+
+        return res.toString();
+    }
+
+    // 生成以node为根节点， 深度为depth的描述二叉树的字符串
+    private void generateBSTString(Node node, int depth, StringBuilder res){
+
+        if (node == null) {
+            res.append(generateDepthString(depth) + "null\n");
+            return;
+        }
+
+        res.append(generateDepthString(depth) + node.e + "\n");
+        generateBSTString(node.left, depth + 1,res);
+        generateBSTString(node.right, depth + 1, res);
+    }
+
+    private String generateDepthString(int depth){
+        StringBuilder res = new StringBuilder();
+        for (int i = 0; i < depth; i++)
+            res.append("--");
+
+        return res.toString();
+    }
+
+
 }
