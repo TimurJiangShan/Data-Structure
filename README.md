@@ -1,2 +1,2 @@
 # Data-Structure
-**LeetCode Practices**
+**LeetCode Practices and fucking Algorithm!!!**
