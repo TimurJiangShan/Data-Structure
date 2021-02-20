@@ -1,5 +1,11 @@
 public class LeetCode572 {
-      public class TreeNode {
+    // 1. search(错误的，因为二叉树的节点不是unique的)
+    // 2. isIdentical
+
+    // 正确的思路：
+    // 1. 将S和T进行是否是一样的树的比较，如果返回false，就让S子树和T比较，一步一步缩小范围
+
+    public class TreeNode {
       int val;
       TreeNode left;
       TreeNode right;
