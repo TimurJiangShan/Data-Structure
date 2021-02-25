@@ -1,6 +1,6 @@
 package com.company;
 
-public class LeetCode876 {
+public class LeetCode876_fast_slow_pointer {
     public ReverseBetween.ListNode middleNode(ReverseBetween.ListNode head) {
         // 快慢指针
         ReverseBetween.ListNode fast = head, slow = head;
