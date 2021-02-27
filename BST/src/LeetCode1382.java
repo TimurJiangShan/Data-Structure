@@ -14,6 +14,9 @@ public class LeetCode1382 {
       }
   }
 
+    // 1. 先中序遍历得到一个有序数组
+    // 2. 再把这个数组变成一个完全二叉树
+
     private ArrayList<Integer> numbers;
 
     public TreeNode balanceBST(TreeNode root) {
