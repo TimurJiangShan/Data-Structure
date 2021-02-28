@@ -32,13 +32,15 @@ public class LeetCode543 {
         // 如果存在右子树，递归遍历右子树(求右子树的深度)
         int rightDepth = root.right==null ? 0 : maxDepth(root.right);
 
-        // 树的深度就是其左、右子树深度的较大值再加 1。
+        // 树的深度就是其左、右子树深度的最大值再加 1。
         int currentNodeDepth = Math.max(leftDepth, rightDepth) + 1;
 
         // 此时左子树的深度和右子树的深度都求出来了，计算以当前节点为根节点的左右节点的路径长度
         // 两个叶子节点之间的路径 = 根节点左右二个子树的深度之和
         // 如果这个路径比之前记录的maxDiameter大，就更新maxDiameter；否则保持不变。
         this.maxDiameter = Math.max(this.maxDiameter, leftDepth+rightDepth);
+
+        // 返回当前节点的深度
         return currentNodeDepth;
     }
 
