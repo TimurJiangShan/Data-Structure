@@ -12,6 +12,8 @@ public class LeetCode270 {
       }
   }
 
+    // 从根开始和目标值进行比较，如果目标值小于当前节点，向左遍历，否则向右遍历
+
     public int closestValue(TreeNode root, double target) {
         TreeNode n = root;
         int res = root.val;
