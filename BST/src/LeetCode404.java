@@ -12,25 +12,38 @@ public class LeetCode404 {
       }
   }
 
-    public int sumOfLeftLeaves(TreeNode root) {
-        if(root == null) return 0;
-        return processSubtree(root, false);
-    }
+//    public int sumOfLeftLeaves(TreeNode root) {
+//        if(root == null) return 0;
+//        return processSubtree(root, false);
+//    }
+//
+//    private int processSubtree(TreeNode root, boolean isLeft) {
+//        if(root.left == null && root.right == null) {
+//            return isLeft ? root.val : 0;
+//        }
+//
+//        int total = 0;
+//        if(root.left != null) {
+//            total += processSubtree(root.left, true);
+//        }
+//
+//        if(root.right != null) {
+//            total += processSubtree(root.right, false);
+//        }
+//
+//        return total;
+//    }
+public int sumOfLeftLeaves(TreeNode root) {
+    return processSubtree(root, false);
+}
 
     private int processSubtree(TreeNode root, boolean isLeft) {
+        if(root == null) return 0;
+
         if(root.left == null && root.right == null) {
             return isLeft ? root.val : 0;
         }
 
-        int total = 0;
-        if(root.left != null) {
-            total += processSubtree(root.left, true);
-        }
-
-        if(root.right != null) {
-            total += processSubtree(root.right, false);
-        }
-
-        return total;
+        return processSubtree(root.left, true) + processSubtree(root.right, false);
     }
 }
