@@ -19,6 +19,7 @@ public class LeetCode110 {
     }
 
     private int getHeight(TreeNode root) {
+        // 这里要返回 -1 ，因为如果此节点是叶子节点，后面的递归是不加1的；
         if(root == null) return -1;
         return 1 + Math.max(getHeight(root.left) , getHeight(root.right));
 

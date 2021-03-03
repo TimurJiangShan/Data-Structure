@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Array/Array.iml" filepath="$PROJECT_DIR$/Array/Array.iml" />
       <module fileurl="file://$PROJECT_DIR$/BST/BST.iml" filepath="$PROJECT_DIR$/BST/BST.iml" />
       <module fileurl="file://$PROJECT_DIR$/LinkedList/LinkedList.iml" filepath="$PROJECT_DIR$/LinkedList/LinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LintCode100Problem/LintCode100Problem.iml" filepath="$PROJECT_DIR$/LintCode100Problem/LintCode100Problem.iml" />
       <module fileurl="file://$PROJECT_DIR$/Queue/Queue.iml" filepath="$PROJECT_DIR$/Queue/Queue.iml" />
       <module fileurl="file://$PROJECT_DIR$/Sort/Sort.iml" filepath="$PROJECT_DIR$/Sort/Sort.iml" />
       <module fileurl="file://$PROJECT_DIR$/Stack/Stack.iml" filepath="$PROJECT_DIR$/Stack/Stack.iml" />
