@@ -21,7 +21,7 @@ public class MergeKSortedLists {
 
     private ListNode mergeHelper(List<ListNode> lists, int start, int end){
         if(start == end) {
-            return lists.get(start);
+            return lists.get(start);  
         }
 
         int mid = start + (end - start)/2;
