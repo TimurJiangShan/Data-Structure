@@ -55,6 +55,19 @@ public class MergeKSortedLists {
 
         // 这里的dummy 怎么就指向merge好的链表了？
         return dummy.next;
+
+        // resursive
+//         if(list1 == null || list2 == null) {
+//             return list1 == null ? list2 : list1;
+//         }
+
+//         if(list1.val < list2.val) {
+//             list1.next = mergeTwoSortLists(list1.next, list2);
+//             return list1;
+//         } else {
+//             list2.next = mergeTwoSortLists(list1, list2.next);
+//             return list2;
+//         }
     }
 
 
