@@ -31,6 +31,7 @@ public class MergeKSortedLists {
         return mergeTwoLists(left, right);
     }
 
+    // 迭代法比递归法要快
     private ListNode mergeTwoLists(ListNode list1, ListNode list2){
         ListNode dummy = new ListNode(0);
         ListNode tail = dummy;
