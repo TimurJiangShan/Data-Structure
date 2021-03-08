@@ -24,23 +24,17 @@ public class ValidateBinarySearchTree {
     }
 
     private ResultType divideConquer(TreeNode root){
-        if(root == null) return new ResultType(true);
+        if (root == null) return new ResultType(true);
 
         ResultType left = divideConquer(root.left);
         ResultType right = divideConquer(root.right);
 
-        if(!left.isBST || !right.isBST){
-            return new ResultType(false);
-        }
+        // 处理不合法的情况
+        if(!left.isBST || !right.isBST) return new ResultType(false);
+        if(left.maxNode != null && left.maxNode.val >= root.val) return new ResultType(false);
+        if(right.minNode != null && right.minNode.val <= root.val)  return new ResultType(false);
 
-        if(left.maxNode != null && left.maxNode.val >= root.val){
-            return new ResultType(false);
-        }
-
-        if(right.minNode != null && right.minNode.val <= root.val){
-            return new ResultType(false);
-        }
-
+        // 记录最小节点和最大节点，以便于递归后节点的比较
         ResultType result = new ResultType(true);
         result.minNode = left.minNode != null ? left.minNode : root;
         result.maxNode = right.maxNode != null ? right.maxNode : root;
