@@ -24,7 +24,9 @@ public class LongestPalindrome {
         if (remove > 0) {
             remove -= 1;
         }
+
         return s.length() - remove;
+
     }
 }
 
