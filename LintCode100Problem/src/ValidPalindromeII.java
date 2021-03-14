@@ -16,35 +16,25 @@ public class ValidPalindromeII {
 
         public boolean validPalindrome(String s) {
             // Write your code here
-            Pair difference = findDifference(s);
+            if(s == null) return true;
+            Pair difference = findDifference(s, 0, s.length()-1);
+            if(difference.left >= difference.right) return true;
             return isValidPalindrome(s, difference.left+1, difference.right) || isValidPalindrome(s, difference.left, difference.right-1);
 
         }
 
-        private Pair findDifference(String s){
-            int left = 0;
-            int right = s.length()-1;
-            while(left < right) {
-                if (s.charAt(left) != s.charAt(right))  {
-                    break;
-                }
+        private Pair findDifference(String s, int left, int right){
+            while(left < right && s.charAt(left) == s.charAt(right)) {
                 left++;
                 right--;
             }
-
             return new Pair(left, right);
-
         }
 
         private boolean isValidPalindrome(String s, int left, int right){
-            while(left < right) {
-                if(s.charAt(left) != s.charAt(right)) {
-                    return false;
-                }
-                left++;
-                right--;
-            }
-            return true;
+            Pair difference = findDifference(s, left, right);
+            return difference.left >= difference.right;
         }
+
     }
 }
