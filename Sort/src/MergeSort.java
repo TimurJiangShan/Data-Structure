@@ -1,4 +1,5 @@
 import java.util.Arrays;
+// 归并排序使用了分治的思想，无论是什么样的数据，所花费的时间都是O(nlogn)的。
 
 public class MergeSort {
     // 我们的算法类不允许产生任何实例
