@@ -27,7 +27,29 @@ public class TwoSum {
 	}
 }
 
-
+// Version2
+    public int twoSum6(int[] nums, int target) {
+     if ( nums == null || nums.length < 2 ) {
+        return 0;
+    }
+    
+	int count = 0;
+    Map<Integer, Integer> map = new HashMap<>();
+    
+    for ( int i = 0; i < nums.length; i++ ) {
+        map.put( nums[i], map.getOrDefault(nums[i], 0) +  1);
+    }
+        
+    for ( int key : map.keySet() ) {
+        int diff = target - key;
+        if ( (diff == key && map.get(diff) > 1 ) 
+            || ( diff != key && map.containsKey(diff) && key < diff)) {
+            count++;
+        }
+    }
+    return count;
+    
+    }
 
 
 
