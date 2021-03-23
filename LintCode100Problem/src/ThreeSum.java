@@ -27,6 +27,7 @@ public class ThreeSum {
                 results.add(triple);
                 left++;
                 right--;
+                // 寻找下一组 twoSum
                 while (left < right && nums[left] == nums[left-1]){
                     left++;
                 }
