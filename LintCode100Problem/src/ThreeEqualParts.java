@@ -1,77 +1,44 @@
 public class ThreeEqualParts {
-    public:
-    vector<int> result;
-    vector<int> threeEqualParts(vector<int>& A)
-    {
-        int oneSum = 0;
-        for(auto d:A)
-        {
-            if(d==1)
-                oneSum ++;
-        }
+    public int[] threeEqualParts(int[] A) {
+        int[] IMP = new int[]{-1, -1};
+        int N = A.length;
 
-        if(oneSum==0)
-        {
-            result.push_back(0);
-            result.push_back(A.size()-1);
-            return result;
-        }
+        int S = 0;
+        for (int x: A) S += x;
+        if (S % 3 != 0) return IMP;
+        int T = S / 3;
+        if (T == 0)
+            return new int[]{0, N - 1};
 
-        if(oneSum % 3 != 0)
-        {
-            result.push_back(-1);
-            result.push_back(-1);
-            return result;
-        }
-
-        int tmpOneSum = 0;
-        int i;
-        for(i = A.size()-1; i >= 0; i --)
-        {
-            if(A[i]==1)
-                tmpOneSum ++;
-            if(tmpOneSum == oneSum/3)
-            {
-                break;
+        int i1 = -1, j1 = -1, i2 = -1, j2 = -1, i3 = -1, j3 = -1;
+        int su = 0;
+        for (int i = 0; i < N; ++i) {
+            if (A[i] == 1) {
+                su += 1;
+                if (su == 1) i1 = i;
+                if (su == T) j1 = i;
+                if (su == T+1) i2 = i;
+                if (su == 2*T) j2 = i;
+                if (su == 2*T + 1) i3 = i;
+                if (su == 3*T) j3 = i;
             }
         }
 
-        vector<int> part3;
-        for(; i < A.size(); i ++)
-            part3.push_back(A[i]);
+        // The array is in the form W [i1, j1] X [i2, j2] Y [i3, j3] Z
+        // where [i1, j1] is a block of 1s, etc.
+        int[] part1 = Arrays.copyOfRange(A, i1, j1+1);
+        int[] part2 = Arrays.copyOfRange(A, i2, j2+1);
+        int[] part3 = Arrays.copyOfRange(A, i3, j3+1);
 
-        for(i = 0; A[i]==0; i ++)
-            ;
-        int part3End = 0;
+        if (!Arrays.equals(part1, part2)) return IMP;
+        if (!Arrays.equals(part1, part3)) return IMP;
 
-        for(int j = i; i-j < part3.size(); i ++)
-        {
-            if(A[i]!=part3[part3End++])
-            {
-                result.push_back(-1);
-                result.push_back(-1);
-                return result;
-            }
-        }
+        // x, y, z: the number of zeros after part 1, 2, 3
+        int x = i2 - j1 - 1;
+        int y = i3 - j2 - 1;
+        int z = A.length - j3 - 1;
 
-        int resultPart = i-1;
-        for(; A[i]==0; i ++)
-            ;
-
-        part3End = 0;
-        for(int j = i; i-j < part3.size(); i ++)
-        {
-            if(A[i]!=part3[part3End++])
-            {
-                result.push_back(-1);
-                result.push_back(-1);
-                return result;
-            }
-        }
-
-        result.push_back(resultPart);
-        result.push_back(i);
-
-        return result;
+        if (x < z || y < z) return IMP;
+        return new int[]{j1+z, j2+z+1};
     }
 }
